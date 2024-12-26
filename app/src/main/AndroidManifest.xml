@@ -93,6 +93,7 @@
             android:name=".activities.BaseActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".activities.SavingActivity" />
     </application>
 
 </manifest>

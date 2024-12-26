@@ -1,5 +1,6 @@
 package com.example.bankingapp.database.service;
 
+import com.example.bankingapp.database.dto.SavingDto;
 import com.example.bankingapp.database.dto.UserDTO;
 import com.example.bankingapp.database.models.User;
 
@@ -13,7 +14,8 @@ import retrofit2.http.POST;
 import retrofit2.http.Path;
 
 public interface UserService {
-
+    @POST("saving/deposit2")
+    Call<Void> createSaving(@Body SavingDto savingDto, @Header("Authorization") String token);
     @GET("user/current-user")
     Call<UserDTO> getCurrentUser(@Header("Authorization") String token);
 

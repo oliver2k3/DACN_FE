@@ -17,9 +17,7 @@ public class UserDTO implements Serializable {
     private String bank;
     private double balance;
 
-    public String getName() {
-        return name;
-    }
+
 
     @AllArgsConstructor
     @NoArgsConstructor
