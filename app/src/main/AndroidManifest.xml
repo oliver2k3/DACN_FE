@@ -94,6 +94,7 @@
             android:exported="true"
             android:windowSoftInputMode="adjustPan" />
         <activity android:name=".activities.SavingActivity" />
+        <activity android:name=".activities.MySavingsActivity" />
     </application>
 
 </manifest>

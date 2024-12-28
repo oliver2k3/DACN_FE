@@ -15,6 +15,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.bankingapp.R;
 import com.example.bankingapp.activities.Exchange;
+import com.example.bankingapp.activities.MySavingsActivity;
 import com.example.bankingapp.activities.PayBill;
 import com.example.bankingapp.activities.PaymentHistory;
 import com.example.bankingapp.activities.SavingActivity;
@@ -46,7 +47,7 @@ public class Home extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    private CardView transfer, report, pay_bill, exchange, payment_report, saving;
+    private CardView transfer, report, pay_bill, exchange, payment_report, saving,mysavings;
     private List<CardView> listCard;
 
     public Home() {
@@ -93,6 +94,7 @@ public class Home extends Fragment {
         pay_bill = view.findViewById(R.id.pay_bill);
         exchange = view.findViewById(R.id.exchange);
         saving = view.findViewById(R.id.saving);
+        mysavings = view.findViewById(R.id.my_savings);
         TextView textView = view.findViewById(R.id.textView3);
         TextView card_name = view.findViewById(R.id.card_name);
         TextView card_number = view.findViewById(R.id.card_number);
@@ -142,10 +144,14 @@ public class Home extends Fragment {
                 } else if (v.getId() == saving.getId()) {
                     Intent intent = new Intent(getActivity(), SavingActivity.class);
                     startActivity(intent);
+                }else if (v.getId() == mysavings.getId()) {
+                    Intent intent = new Intent(getActivity(), MySavingsActivity.class);
+                    startActivity(intent);
                 }
             });
         });
-
+ 
         return view;
     }
+
 }

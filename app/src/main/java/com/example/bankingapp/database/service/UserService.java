@@ -18,6 +18,8 @@ public interface UserService {
     Call<Void> createSaving(@Body SavingDto savingDto, @Header("Authorization") String token);
     @GET("user/current-user")
     Call<UserDTO> getCurrentUser(@Header("Authorization") String token);
+    @GET("/my-savings")
+    Call<List<SavingDto>> getMySavings(@Header("Authorization") String token);
 
 //    @GET("/user/{email}")
 //    Call<User> getUserByEmail(@Path("email") String email);

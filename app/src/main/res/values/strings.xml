@@ -33,4 +33,6 @@
     <string name="app_information">App information</string>
     <string name="customer_care">Customer care</string>
     <string name="logout">Logout</string>
+    <string name="success_image_desc">Success Image</string>
+
 </resources>

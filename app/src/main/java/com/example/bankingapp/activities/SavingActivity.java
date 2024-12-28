@@ -1,5 +1,6 @@
 package com.example.bankingapp.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -143,7 +144,8 @@ public class SavingActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<Void> call, Response<Void> response) {
                 if (response.isSuccessful()) {
-                    Toast.makeText(SavingActivity.this, "Saving created successfully", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(SavingActivity.this, SuccessActivity.class);
+                    startActivity(intent);
                 } else {
                     Toast.makeText(SavingActivity.this, "Failed to create saving: " + response.code() + " " + response.message(), Toast.LENGTH_SHORT).show();
                 }
